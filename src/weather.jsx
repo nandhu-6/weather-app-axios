@@ -11,7 +11,7 @@ function Weather() {
     const handleInput = (evt) => setCity(evt.target.value);
 
     const getWeather = () => {
-        var weatherData = axios(`http://api.weatherapi.com/v1/current.json?key=9dcc41f3610a45088c0140230252503&q=${city}`);
+        var weatherData = axios(`https://api.weatherapi.com/v1/current.json?key=9dcc41f3610a45088c0140230252503&q=${city}`);
         weatherData.then((success) => {
             console.log(success.data);
             setDesc(success.data.current.condition.text)
